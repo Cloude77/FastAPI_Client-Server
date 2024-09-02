@@ -1,0 +1,27 @@
+1) Убедитесь, что установлены все необходимые библиотеки: FastAPI, Uvicorn и requests, используя
+text:
+pip install fastapi uvicorn[standard] python-multipart requests
+
+Запуск сервера:
+1) Запустите сервер: uvicorn server:app --reload.
+2) Сервер будет доступен по адресу http://localhost:8000.
+
+Использование клиента:
+1) Загружайте файл на сервер: python client.py upload path/to/your/file.
+2) Скачивайте файл с сервера: python client.py download filename.
+
+Пример:
+Пример загрузки файла на сервер:
+1) Убедитесь, что у вас есть файл, который вы хотите загрузить, например test.txt.
+2) Выполните команду для загрузки файла:
+python client.py upload test.txt
+
+Пример скачивания файла с сервера:
+1) Выполните команду для скачивания файла:
+python client.py download test.txt
+
+
+
+API:
+1) POST /upload: Загрузка файла на сервер.
+2) GET /download: Скачивание файла с сервера. Требуется параметр filename (имя файла).
